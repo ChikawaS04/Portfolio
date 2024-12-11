@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+.highlight {
+    color: #1d4ed8; /* The blue color used throughout your website */
+}
+
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff; /* Default link color */
+    text-decoration: none;
+}
+
+.link a:visited {
+    color: #fff; /* Same as unvisited links to prevent purple visited links */
+}
+
+.link a:hover {
+    color: #1d4ed8; /* Highlight on hover */
+}
+
+.link a:active {
+    color: #1e40af; /* Optional: Add active state styling */
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #1e40af;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+.p2 {
+    margin-top: 1.5rem;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1000px;
+    color: #ccc;
+}
+
+.projects-heading {
+    text-align: center;
+    margin: 2rem 0;
+    color: #fff; /* Matches website theme */
+}
+
+.projects-heading h1 {
+    font-size: rem;
+    color: #1d4ed8; /* Blue color consistent with the website */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.projects-list {
+    display: flex; /* Horizontal layout */
+    flex-direction: row; /* Ensure items are in a row */
+    justify-content: center; /* Center-align items */
+    gap: 2rem; /* Add space between items */
+    padding: 0;
+    margin: 2rem 0;
+    list-style: none;
+}
+
+.projects-list li {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center-align contents (image and text) */
+    width: 400px; /* Increase width for larger items */
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    background-color: #1d1f23; /* Ensure background contrast */
+    padding: 1.5rem; /* Add padding inside the card */
+}
+
+.projects-list img {
+    width: 100%; /* Keep responsive */
+    height: auto;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff; /* Ensure title is white */
+    margin: 1rem 0; /* Add spacing above and below */
+}
+
+.project-summary {
+    margin-top: 1rem; /* Add more spacing above the text */
+    font-size: 1rem; /* Slightly increase font size */
+    color: #fff; /* Ensure description text is white */
+    line-height: 1.6rem; /* Better readability */
+    padding: 0 1rem; /* Add horizontal padding */
+    text-align: center; /* Center the text */
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: #1d4ed8; /* Blue color for tech stack */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem; /* Add some spacing above */
+}
+
+.lightbox {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.show {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    height: 80vh; /* Makes it look centered on the page */
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-subheading {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.contact-info-section {
+    margin-top: -10rem; /* Reduced margin to move it closer */
+    text-align: center;
+    padding: 2rem;
+    background-color: #1d1f23; /* Slightly darker background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+
+.contact-info-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #1d4ed8; /* Highlight heading */
+}
+
+.contact-info-section p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-info-section a {
+    color: #1d4ed8; /* Make links stand out */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-section a:hover {
+    color: #1e40af; /* Slightly darker hover effect */
+}
+
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo{
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p{
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+footer .column h4{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a{
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover{
+    color: #1d4ed8;
+}
+
+footer .column span {
+    display: block;
+    color: #ccc; /* Matches other footer text color */
+    margin-bottom: 1rem; /* Add consistent spacing */
+    cursor: default; /* Indicates the text is not clickable */
+}
+
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}

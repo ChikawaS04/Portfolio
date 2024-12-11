@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Projects - David Davidson</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="images/logonewnew.png" alt="David Davidson Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="index.html">Home</a></li>
+            <li id="link1" class="link"><a href="projects.html">Projects</a></li>
+            <li class="link"><a href="contact.html">Contact</a></li>        
+        </ul>
+        <a href="DavidsResume.pdf" download="DavidsResume.pdf" class="btn">My Resume</a>
+    </nav>
+
+    <!-- Added Heading -->
+    <div class="projects-heading">
+        <h1>A list of my accomplishments</h1>
+    </div>
+
+    <ul class="projects-list">
+        <li>
+            <a href="#" class="clickable-img">
+                <img src="images/projects_img/ClientService Management System.PNG" alt="Project 1">
+            </a>
+            <h2 class="project-title">Event Management System</h2>
+            <p class="project-summary">A user-friendly platform for managing client data with features like search, data editing, and secure access.</p>
+            <p class="project-tech">
+                <i class="ri-tools-line"></i> C#, MVVM, Azure
+            </p>
+        </li>
+        <li>
+            <a href="#" class="clickable-img">
+                <img src="images/projects_img/ClientSystem Management.PNG" alt="Project 2">
+            </a>
+            <h2 class="project-title">Client Management System</h2>
+            <p class="project-summary">Simplifies customer information and interactions with a seamless user experience.</p>
+            <p class="project-tech">
+                <i class="ri-tools-line"></i> JavaScript, CSS/HTML, Tailwind
+            </p>
+        </li>
+        <li>
+            <a href="#" class="clickable-img">
+                <img src="images/projects_img/Pacman Game.PNG" alt="Project 3">
+            </a>
+            <h2 class="project-title">Pacman Game</h2>
+            <p class="project-summary">A recreation of the classic arcade game with added custom features for enhanced gameplay.</p>
+            <p class="project-tech">
+                <i class="ri-tools-line"></i> Python, Pygame
+            </p>
+        </li>
+    </ul>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Enlarged Project">
+        <p id="lightbox-description" class="lightbox-description"></p>
+    </div>
+
+    <footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logonewnew.png" alt="David Davidson Logo">
+                </a>            </div>
+            <div class="socials">
+                <a href="#"><i class="ri-linkedin-line"></i></a>
+                <a href="#"><i class="ri-github-line"></i></a>
+                <a href="#"><i class="ri-facebook-line"></i></a>
+            </div>
+        </div>
+        <div class="column">
+            <h4>Company</h4>
+            <span>Business</span>
+            <span>Partnership</span>            
+            <span>Network </span>
+        </div>
+        <div class="column">
+            <h4>Contact</h4>
+            <a href="contact.html">Contact Us</a> 
+            <span>Privacy Policy</span> 
+            <span>Terms & Conditions</span> 
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
